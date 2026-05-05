@@ -472,18 +472,13 @@ p { margin: 0 0 1em; }
   gap: 56px;
   align-items: center;
 }
-.founder-photo .photo-placeholder {
+.founder-photo {
+  position: relative;
+}
+.founder-photo .founder-img {
   width: 100%;
-  aspect-ratio: 1;
-  border-radius: var(--radius-lg);
-  background: linear-gradient(135deg, var(--teal), var(--navy));
-  color: var(--green);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-head);
-  font-size: 6rem;
-  box-shadow: var(--shadow);
+  height: auto;
+  display: block;
 }
 .founder-copy blockquote {
   margin: 0 0 16px;
@@ -708,8 +703,7 @@ p { margin: 0 0 1em; }
 
   /* founder */
   .founder-grid { gap: 24px; }
-  .founder-photo { max-width: 160px; }
-  .founder-photo .photo-placeholder { font-size: 4rem; }
+  .founder-photo { max-width: 200px; }
   .founder-copy blockquote { font-size: 1.15rem; }
   .authority-list {
     grid-template-columns: 1fr;
