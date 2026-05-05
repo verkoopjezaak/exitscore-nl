@@ -37,6 +37,7 @@
 /* ---------- reset ---------- */
 *, *::before, *::after { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
+html, body { overflow-x: hidden; }
 body {
   margin: 0;
   font-family: var(--font-body);
@@ -59,6 +60,9 @@ h1, h2, h3, h4 {
   line-height: 1.15;
   margin: 0 0 0.4em;
   letter-spacing: -0.01em;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
 }
 h1 { font-size: clamp(1.95rem, 5.4vw, 3.4rem); line-height: 1.12; }
 h2 { font-size: clamp(1.5rem, 4vw, 2.4rem); }
@@ -240,6 +244,7 @@ p { margin: 0 0 1em; }
   gap: 64px;
   align-items: center;
 }
+.hero-grid > * { min-width: 0; }
 .hero-copy h1 em {
   font-style: normal;
   color: var(--teal);
@@ -589,13 +594,11 @@ p { margin: 0 0 1em; }
     display: none;
   }
   .method-step {
-    display: grid;
-    grid-template-columns: 64px 1fr;
-    gap: 16px;
-    align-items: start;
-    padding: 20px 22px;
+    padding: 24px 24px;
   }
-  .method-step .step-circle { margin: 0; }
+  .method-step .step-circle {
+    margin-bottom: 14px;
+  }
 
   .feature-grid { grid-template-columns: 1fr 1fr; }
   .feature-card { grid-column: span 1; }
@@ -685,12 +688,6 @@ p { margin: 0 0 1em; }
 
   /* method */
   .method-step { padding: 18px 18px; }
-  .step-circle {
-    width: 48px;
-    height: 48px;
-    font-size: 1rem;
-    margin-bottom: 0;
-  }
 
   /* mid CTA band */
   .cta-band { padding: 28px 0; }
