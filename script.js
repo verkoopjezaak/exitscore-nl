@@ -57,15 +57,17 @@
     else if (mq.addListener) mq.addListener(onMq);
   }
 
-  // Play-button placeholder animation (until real video is provided)
-  const playBtn = document.querySelector('.play-button');
-  if (playBtn) {
-    playBtn.addEventListener('click', (e) => {
-      e.preventDefault();
-      playBtn.animate(
-        [{ transform: 'scale(1)' }, { transform: 'scale(0.92)' }, { transform: 'scale(1)' }],
-        { duration: 220, easing: 'ease-out' }
-      );
-    });
+  // Demo-animaties starten zodra ze in beeld komen; bij reduced motion meteen de eindstand.
+  const demos = document.querySelectorAll('[data-anim]');
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduce || !('IntersectionObserver' in window)) {
+    demos.forEach((d) => d.classList.add('in'));
+  } else {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.3 });
+    demos.forEach((d) => io.observe(d));
   }
 })();

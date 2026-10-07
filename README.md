@@ -1,26 +1,22 @@
 # exitscore.nl
 
-Statische landingspagina voor Exit Score, het platform van Verkoop je Zaak.
+Statische productsite voor de Exit Score (het getal van 0 tot 100 en het Exit Score platform van Verkoop je Zaak). Eén CTA: de Exit Scorecard op verkoopjezaak.nl.
 
 ## Stack
 - Vanilla HTML5 + CSS + minimale JS, geen build-tool.
-- Fonts via Google Fonts (Prompt Bold + Poppins).
-- Huisstijl Verkoop je Zaak (zie Branding map).
+- Fonts via Google Fonts (Prompt Bold + Poppins), huisstijl Verkoop je Zaak.
+- Demo-animaties zijn CSS/SVG met fictieve getallen; ze respecteren prefers-reduced-motion.
 
 ## Lokaal previewen
 ```bash
-cd /home/umbrel/exitscore-nl
 python3 -m http.server 8765
-# open http://localhost:8765
 ```
 
-## Deploy
-- Doel: Vercel (statisch project) onder `exitscore.nl`.
-- Wachten op assets: demo-video, foto Maarten, screenshots platform.
+## Hosting
+- Cloudflare Pages (DNS en hosting op Cloudflare, project `exitscore`, ook op exitscore.pages.dev).
+- `_headers` zet `X-Robots-Tag: noindex` op alle pages.dev-adressen; het eigen domein valt erbuiten.
+- Feitenbasis voor alle claims: Cortex `projecten/exitscore-nl/feitenbasis.md`.
 
-## Te vervangen vóór live
-1. Demo-video in `.video-frame` (hero)
-2. Foto Maarten in `.founder-photo .photo-placeholder`
-3. Vijf screenshots in `.feature-visual .placeholder` (privacy-modus aan)
-4. Cijfers in `.authority-list` (aantal trajecten, jaren ervaring, kerncijfer)
-5. Echte URL voor Scorecard CTA als die afwijkt van `/scorecard`
+## Open vóór live
+1. Proof over het platform zelf (klantquote met toestemming).
+2. Optioneel: echte schermafbeeldingen, alleen van preview met privacymodus en testdata.

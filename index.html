@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Exit Score | Stuur op de waarde en verkoopbaarheid van je bedrijf</title>
-  <meta name="description" content="Het platform waarmee elke ondernemer in een Verkoop je Zaak-traject realtime ziet hoe verkoopklaar zijn bedrijf is, en wat er nog te doen is.">
+  <title>Exit Score | Weet hoe verkoopklaar je bedrijf is en stuur op de waarde</title>
+  <meta name="description" content="De Exit Score laat in een getal van 0 tot 100 zien hoe verkoopklaar je bedrijf is, gemeten op zeven onderdelen waar kopers op letten. Begin met de gratis Exit Scorecard.">
   <link rel="icon" type="image/png" href="assets/favicon.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,9 +12,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Prompt:wght@700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.add('js');</script>
 
-  <meta property="og:title" content="Exit Score | Stuur op de waarde en verkoopbaarheid van je bedrijf">
-  <meta property="og:description" content="Realtime inzicht in jouw verkooptraject. Ontdek je Exit Score in 3 minuten.">
+  <meta property="og:title" content="Exit Score | Weet hoe verkoopklaar je bedrijf is">
+  <meta property="og:description" content="Een getal van 0 tot 100, zeven onderdelen, en zicht op wat je bedrijf waardevoller maakt. Doe de gratis Exit Scorecard in twee minuten.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://exitscore.nl">
 </head>
@@ -26,9 +27,10 @@
         <img src="assets/logo.png" alt="Verkoop je Zaak" class="logo">
       </a>
       <nav class="primary-nav" aria-label="Hoofdmenu">
-        <a href="#methode">Hoe het werkt</a>
+        <a href="#wat">Wat het is</a>
+        <a href="#methode">Methode</a>
         <a href="#platform">Platform</a>
-        <a href="#over">Over</a>
+        <a href="#over">Over Maarten</a>
       </nav>
       <a href="https://verkoopjezaak.nl/exit-scorecard/" class="btn btn-primary btn-sm header-cta">
         Doe de Exit Scorecard
@@ -42,171 +44,285 @@
 
   <main>
 
+    <!-- HERO -->
     <section class="hero">
       <div class="container hero-grid">
         <div class="hero-copy">
           <span class="eyebrow">Exit Score</span>
-          <h1>Stuur op de <em>waarde</em> én de <em>verkoopbaarheid</em> van je bedrijf.</h1>
-          <p class="lead">Het platform waarmee elke ondernemer in een Verkoop je Zaak-traject realtime ziet hoe verkoopklaar zijn bedrijf is, en wat er nog te doen is.</p>
+          <h1>Weet hoe <em>verkoopklaar</em> je bedrijf is, en wat het <em>waardevoller</em> maakt.</h1>
+          <p class="hero-intro">De Exit Score is een getal van 0 tot 100. Het laat zien hoe verkoopklaar je bedrijf is, gemeten op de punten waar kopers in de praktijk het zwaarst aan tillen. Zo stuur je niet op gevoel, maar op wat een koper ziet.</p>
           <div class="cta-row">
             <a href="https://verkoopjezaak.nl/exit-scorecard/" class="btn btn-primary btn-lg">
-              Doe de Exit Scorecard, 3 minuten
+              Doe de Exit Scorecard
               <span class="arrow" aria-hidden="true">&rarr;</span>
             </a>
-            <a href="#demo" class="btn-link">Bekijk de demo</a>
+            <span class="cta-note">Gratis, in twee minuten je eerste score.</span>
           </div>
         </div>
-        <div class="hero-visual" id="demo">
-          <div class="video-frame" role="img" aria-label="Demo video van het Exit Score platform, komt binnenkort">
-            <button class="play-button" aria-label="Speel demo video af">
-              <svg viewBox="0 0 24 24" width="32" height="32" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg>
-            </button>
-            <span class="video-label">Demo komt binnenkort</span>
-          </div>
+
+        <div class="hero-visual">
+          <figure class="demo-card dash" data-anim aria-label="Illustratie van het Exit Score dashboard met fictieve getallen: score 72, gestegen van 48.">
+            <div class="demo-top">
+              <span class="demo-title">Exit Score</span>
+              <span class="demo-chip">Illustratie</span>
+            </div>
+            <div class="dash-body">
+              <div class="gauge">
+                <svg viewBox="0 0 120 120" aria-hidden="true">
+                  <circle class="gauge-bg" cx="60" cy="60" r="52"/>
+                  <circle class="gauge-fill" cx="60" cy="60" r="52" pathLength="100"/>
+                </svg>
+                <div class="gauge-num"><span class="count" aria-hidden="true"></span><small>van 100</small></div>
+              </div>
+              <div class="dash-trend">
+                <span class="mini-label">Ontwikkeling over tijd</span>
+                <svg viewBox="0 0 200 70" class="trend" aria-hidden="true">
+                  <polyline class="trend-line" pathLength="1" points="4,58 36,54 68,47 100,40 132,30 164,24 196,14"/>
+                  <circle class="trend-dot" cx="196" cy="14" r="4"/>
+                </svg>
+                <span class="delta">+24 sinds de start</span>
+              </div>
+            </div>
+            <ul class="mini-bars" aria-hidden="true">
+              <li><span>Financieel &amp; Cashflow</span><b><i style="--v:.78"></i></b></li>
+              <li><span>Eigenaaronafhankelijkheid</span><b><i style="--v:.56"></i></b></li>
+              <li><span>Omzetkwaliteit &amp; Klanten</span><b><i style="--v:.82"></i></b></li>
+              <li><span>Team &amp; Organisatie</span><b><i style="--v:.70"></i></b></li>
+            </ul>
+            <figcaption class="demo-caption">Gestileerd voorbeeld met fictieve getallen.</figcaption>
+          </figure>
         </div>
       </div>
       <div class="hero-bg" aria-hidden="true"></div>
     </section>
 
-    <section class="problem">
+    <!-- WAT HET IS -->
+    <section class="intro" id="wat">
       <div class="container">
-        <p class="section-intro">Voor de meeste ondernemers voelt een verkooptraject als een zwarte doos. Dat hoeft niet.</p>
-        <div class="problem-grid">
-          <article class="problem-card">
-            <div class="icon-wrap"><svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z" fill="currentColor"/></svg></div>
-            <h3>Geen overzicht</h3>
-            <p>Verkoop voelt als een zwarte doos. Wat gebeurt er, en wanneer?</p>
+        <header class="section-head">
+          <span class="eyebrow">Wat de Exit Score is</span>
+          <h2>Eén getal dat laat zien waar je staat. Zeven onderdelen die laten zien waarom.</h2>
+          <p class="section-sub">Je begint met de gratis Exit Scorecard en krijgt direct een eerste score. Ga je verder met Verkoop je Zaak, dan meten we je bedrijf volledig in het Exit Score platform, met per onderdeel concrete verbeterpunten.</p>
+        </header>
+        <div class="intro-grid">
+          <article class="intro-card">
+            <span class="step-tag">1</span>
+            <h3>De Exit Scorecard</h3>
+            <p>Een korte zelftest op verkoopjezaak.nl. In twee minuten een score van 0 tot 100, met een korte toelichting per onderdeel.</p>
           </article>
-          <article class="problem-card">
-            <div class="icon-wrap"><svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><path d="M11 7h2v6h-2zm0 8h2v2h-2zm1-13C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z" fill="currentColor"/></svg></div>
-            <h3>Verkoopbaarheid onduidelijk</h3>
-            <p>Is je bedrijf écht klaar voor een koper, of zie je dat pas in due diligence?</p>
+          <article class="intro-card">
+            <span class="step-tag">2</span>
+            <h3>De volledige meting</h3>
+            <p>In het platform scoren we je bedrijf op zeven gewogen onderdelen. Een deel van de punten volgt automatisch uit je cijfers en gegevens.</p>
           </article>
-          <article class="problem-card">
-            <div class="icon-wrap"><svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8v6h2V3h-8v2h6l-7 7-4-4-7 7z" fill="currentColor"/></svg></div>
-            <h3>Sturen zonder dashboard</h3>
-            <p>Investeren in waarde zonder grip op wat het oplevert is gokken met je nalatenschap.</p>
+          <article class="intro-card">
+            <span class="step-tag">3</span>
+            <h3>Score en waarde samen</h3>
+            <p>Omdat de score meeweegt in de waardering, zie je wat verbeteren je bedrijf waard maakt. De score is een indicatie, geen formele waardering of due diligence.</p>
           </article>
         </div>
       </div>
     </section>
 
+    <!-- METHODE -->
     <section class="method" id="methode">
+      <div class="container method-grid">
+        <div class="method-copy">
+          <span class="eyebrow">De methode</span>
+          <h2>Zeven onderdelen, gewogen naar wat kopers belangrijk vinden.</h2>
+          <p>Niet elk onderdeel telt even zwaar. Je cijfers en de vraag of je bedrijf zonder jou draait, wegen samen de helft. Per onderdeel zie je welke verbeterpunten je al op orde hebt en welke nog punten kosten.</p>
+          <ul class="checks">
+            <li>Een deel van de punten wordt automatisch gescoord, bijvoorbeeld klantconcentratie, terugkerende omzet en personeelsstabiliteit.</li>
+            <li>Sommige punten zijn een blokkade zolang ze niet geregeld zijn. Die zie je meteen.</li>
+            <li>Rode vlaggen staan apart van de score, zodat ze niet wegvallen in een gemiddelde.</li>
+          </ul>
+        </div>
+        <figure class="demo-card weights" data-anim aria-label="De zeven onderdelen van de Exit Score met hun weging.">
+          <div class="demo-top">
+            <span class="demo-title">Weging per onderdeel</span>
+            <span class="demo-chip">Samen 100</span>
+          </div>
+          <ol class="weight-list">
+            <li style="--w:25"><span class="w-name">Financieel &amp; Cashflow</span><span class="w-val">25</span><b><i></i></b></li>
+            <li style="--w:25"><span class="w-name">Eigenaaronafhankelijkheid</span><span class="w-val">25</span><b><i></i></b></li>
+            <li style="--w:15"><span class="w-name">Omzetkwaliteit &amp; Klanten</span><span class="w-val">15</span><b><i></i></b></li>
+            <li style="--w:15"><span class="w-name">Team &amp; Organisatie</span><span class="w-val">15</span><b><i></i></b></li>
+            <li style="--w:10"><span class="w-name">Systemen &amp; Processen</span><span class="w-val">10</span><b><i></i></b></li>
+            <li style="--w:5"><span class="w-name">Juridisch &amp; Structuur</span><span class="w-val">5</span><b><i></i></b></li>
+            <li style="--w:5"><span class="w-name">Groei &amp; Marktpositie</span><span class="w-val">5</span><b><i></i></b></li>
+          </ol>
+        </figure>
+      </div>
+    </section>
+
+    <!-- WAARDE -->
+    <section class="value" id="waarde">
+      <div class="container value-grid">
+        <figure class="demo-card band-demo" data-anim aria-label="Illustratie: de waardebandbreedte schuift naar rechts als de Exit Score stijgt van 48 naar 72, en het gat met de doelwaarde wordt kleiner. Fictieve index, geen bedragen.">
+          <div class="demo-top">
+            <span class="demo-title">Waardebeeld</span>
+            <span class="demo-chip">Illustratie</span>
+          </div>
+          <div class="band-score">Exit Score <strong class="live-score" aria-hidden="true"></strong></div>
+          <div class="band-track" aria-hidden="true">
+            <div class="band"><span>laag</span><span>midden</span><span>hoog</span></div>
+            <div class="target"><span>doel</span></div>
+          </div>
+          <div class="band-axis" aria-hidden="true"><span>onderkant sector</span><span>bovenkant sector</span></div>
+          <figcaption class="demo-caption">Fictieve waarde-index, geen bedragen. De bandbreedte hangt af van je winst, je sector en je Exit Score.</figcaption>
+        </figure>
+        <div class="value-copy">
+          <span class="eyebrow">Score stuurt waarde</span>
+          <h2>Een hogere Exit Score betekent een hogere multiple binnen de bandbreedte van je sector.</h2>
+          <p>Je waardebeeld is geen los getal, maar een bandbreedte van laag tot hoog. Die volgt uit je winst, je sector en je Exit Score. Gaat je score omhoog, dan schuift de bandbreedte mee.</p>
+          <p>Leg je doelwaarde vast in je exit plan, dan zie je ook het gat tussen waar je nu staat en waar je naartoe wilt. En welke verbeterpunten dat gat het snelst kleiner maken.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PLATFORM -->
+    <section class="platform" id="platform">
       <div class="container">
         <header class="section-head">
-          <span class="eyebrow">De methode</span>
-          <h2>Van eerste score tot getekende deal in vier stappen.</h2>
+          <span class="eyebrow">Het Exit Score platform</span>
+          <h2>Maarten bouwde er een platform omheen. Dit doet het.</h2>
+          <p class="section-sub">Klanten van Verkoop je Zaak werken in het Exit Score platform. Daar komen score, waarde, cijfers en dossier samen, van de eerste meting tot de verkoop.</p>
+        </header>
+        <div class="feature-grid">
+          <article class="feature-card">
+            <div class="icon-wrap"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <h3>Score en waarde over tijd</h3>
+            <p>Elke maand wordt je Exit Score vastgelegd. Je ziet waar je begon, waar je nu staat en hoe je waardebeeld zich ontwikkelt.</p>
+          </article>
+          <article class="feature-card">
+            <div class="icon-wrap"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M3 12h18M7 8v8M17 8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
+            <h3>Waardebandbreedte</h3>
+            <p>Je waarde als bandbreedte van laag tot hoog, gestuurd door je winst, je sector en je Exit Score. Zichtbaar zodra Maarten je waardering heeft vrijgegeven.</p>
+          </article>
+          <article class="feature-card">
+            <div class="icon-wrap"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="3" fill="currentColor"/></svg></div>
+            <h3>Doelwaarde en het gat</h3>
+            <p>Je legt vast welke waarde je wilt bereiken. Het platform laat het verschil zien met je huidige waarde.</p>
+          </article>
+          <article class="feature-card">
+            <div class="icon-wrap"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M6 3v18M6 4h11l-2 4 2 4H6" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></div>
+            <h3>Exit plan</h3>
+            <p>Wat wil je echt, welke waarde, en wanneer? Je weegt ook af wat zwaarder telt: de prijs of de voorwaarden.</p>
+          </article>
+          <article class="feature-card">
+            <div class="icon-wrap"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M4 6h16v12H4zM4 10h16M9 14h3" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></div>
+            <h3>Koppeling met je boekhouding</h3>
+            <p>Koppel Moneybird of Exact Online. Je afgesloten boekjaren en je lopend boekjaar komen binnen en voeden de laatste 12 maanden en de waardering.</p>
+          </article>
+          <article class="feature-card">
+            <div class="icon-wrap"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M7 3h7l5 5v13H7zM14 3v5h5M10 13l2 2 4-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/></svg></div>
+            <h3>Documentoverzicht</h3>
+            <p>Upload je stukken en ze worden automatisch herkend. Per categorie zie je in gewone taal wat er nog mist.</p>
+          </article>
+          <article class="feature-card">
+            <div class="icon-wrap"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M6 11V8a6 6 0 0112 0v3M5 11h14v10H5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></div>
+            <h3>Dataroom voor kopers</h3>
+            <p>Kopers tekenen eerst digitaal een geheimhoudingsverklaring. Daarna zien ze per fase meer, zodat jij bepaalt wat wanneer gedeeld wordt.</p>
+          </article>
+          <article class="feature-card">
+            <div class="icon-wrap"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M5 12l4 4 10-10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <h3>Verbeterpunten per onderdeel</h3>
+            <p>Per onderdeel concrete verbeterpunten. Komt er nieuwe informatie binnen, dan stelt het platform voor om een onderwerp opnieuw te beoordelen.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- STUREN -->
+    <section class="steer">
+      <div class="container">
+        <header class="section-head">
+          <span class="eyebrow">Sturen op waarde</span>
+          <h2>Van ondernemingswaarde naar verkoopwaarde.</h2>
+          <p class="section-sub">Wat je bedrijf op papier waard is en wat een koper er echt voor betaalt, liggen vaak uit elkaar. Het verschil zit in wat een koper als risico ziet. Daar stuur je op.</p>
         </header>
         <ol class="method-flow">
           <li class="method-step">
             <div class="step-circle"><span>01</span></div>
-            <h3>Score</h3>
-            <p>Doe de Exit Scorecard. Direct een eerste indicatie van waarde en verkoopbaarheid.</p>
+            <h3>Meten</h3>
+            <p>Begin met de Exit Scorecard. Daarna de volledige meting over zeven onderdelen.</p>
           </li>
           <li class="method-arrow" aria-hidden="true">&rarr;</li>
           <li class="method-step">
             <div class="step-circle"><span>02</span></div>
-            <h3>Verbeteren</h3>
-            <p>Werk samen met Verkoop je Zaak aan de assen die jouw score omhoog brengen.</p>
+            <h3>Kiezen</h3>
+            <p>Pak eerst de verbeterpunten die het zwaarst wegen en de blokkades die een koper afschrikken.</p>
           </li>
           <li class="method-arrow" aria-hidden="true">&rarr;</li>
           <li class="method-step">
             <div class="step-circle"><span>03</span></div>
-            <h3>Verkoopklaar</h3>
-            <p>Documenten op orde, kopers in beeld, dataroom klaar voor due diligence.</p>
+            <h3>Verbeteren</h3>
+            <p>Samen met Maarten werk je de punten af. Je cijfers en documenten komen op één plek.</p>
           </li>
           <li class="method-arrow" aria-hidden="true">&rarr;</li>
           <li class="method-step">
             <div class="step-circle"><span>04</span></div>
-            <h3>Verkocht</h3>
-            <p>Onderhandelen, tekenen en overdragen, met alles op één plek terug te vinden.</p>
+            <h3>Volgen</h3>
+            <p>Je ziet score en waardebeeld over tijd bewegen en weet of je dichter bij je doelwaarde komt.</p>
           </li>
         </ol>
       </div>
     </section>
 
-    <section class="cta-band">
-      <div class="container cta-band-inner">
-        <p>Benieuwd naar jouw Exit Score? Doe de test in 3 minuten.</p>
-        <a href="https://verkoopjezaak.nl/exit-scorecard/" class="btn btn-primary">
-          Doe de Exit Scorecard
-          <span class="arrow" aria-hidden="true">&rarr;</span>
-        </a>
-      </div>
-    </section>
-
-    <section class="platform" id="platform">
-      <div class="container">
-        <header class="section-head">
-          <span class="eyebrow">Het platform in actie</span>
-          <h2>Eén dashboard. Twee assen. Geen verrassingen.</h2>
-          <p class="section-sub">In het Verkoop je Zaak-traject krijg je toegang tot Exit Score. Dit zie je elke dag.</p>
-        </header>
-        <div class="feature-grid">
-
-          <article class="feature-card feature-large">
-            <div class="feature-visual"><div class="placeholder">Screenshot: Exit Score dashboard met waarde € en score</div></div>
-            <h3>Exit Score dashboard</h3>
-            <p>Twee assen die het verschil maken: waarde in euro's en verkoopbaarheid in score. Eén blik en je weet waar je op moet sturen.</p>
-          </article>
-
-          <article class="feature-card">
-            <div class="feature-visual"><div class="placeholder">Screenshot: traject-status overzicht</div></div>
-            <h3>Realtime traject-status</h3>
-            <p>Alle stappen, alle deadlines, alle eigenaren. In één oogopslag zie je waar je staat.</p>
-          </article>
-
-          <article class="feature-card">
-            <div class="feature-visual"><div class="placeholder">Screenshot: documenten / dataroom</div></div>
-            <h3>Documenten upload</h3>
-            <p>Alles voor due diligence op één plek. Veilig, gestructureerd, klaar wanneer de koper er om vraagt.</p>
-          </article>
-
-          <article class="feature-card">
-            <div class="feature-visual"><div class="placeholder">Screenshot: gesprekken terugkijken</div></div>
-            <h3>Gesprekken terugkijken</h3>
-            <p>Opnames en samenvattingen na elke call. Geen detail meer dat verdwijnt na een meeting.</p>
-          </article>
-
-          <article class="feature-card">
-            <div class="feature-visual"><div class="placeholder">Screenshot: koper-overzicht (geanonimiseerd)</div></div>
-            <h3>Koper-overzicht</h3>
-            <p>Wie zit waar in het proces? Welke vragen lopen? Eén lijst, altijd actueel.</p>
-          </article>
-
-        </div>
-      </div>
-    </section>
-
+    <!-- OVER MAARTEN -->
     <section class="founder" id="over">
       <div class="container founder-grid">
         <div class="founder-photo">
-          <img src="assets/maarten.png" alt="Maarten Ligthart, oprichter Verkoop je Zaak" class="founder-img" width="640" height="640">
+          <img src="assets/maarten.png" alt="Maarten Ligthart, oprichter van Verkoop je Zaak" class="founder-img" width="640" height="640">
         </div>
         <div class="founder-copy">
-          <span class="eyebrow">Over Exit Score</span>
-          <blockquote>
-            <p>"Ik heb Exit Score gebouwd omdat ik in mijn eigen verkooptrajecten merkte dat ondernemers stuurinformatie missen. Nu krijgt elke klant het standaard, en zien ze zelf precies wat hun bedrijf waardevoller en makkelijker verkoopbaar maakt."</p>
-          </blockquote>
-          <p class="founder-attribution"><strong>Maarten Ligthart</strong>, oprichter Verkoop je Zaak</p>
-          <ul class="authority-list">
-            <li><strong>Doelgroep</strong><br>Bedrijven vanaf €750K verkoopwaarde</li>
-            <li><strong>Aanpak</strong><br>Score, verbeteren, verkoopklaar, verkocht</li>
-            <li><strong>Onderscheid</strong><br>Eigen platform en methode in één traject</li>
-          </ul>
+          <span class="eyebrow">Over Maarten</span>
+          <h2>Maarten Ligthart</h2>
+          <p>Ik ben oprichter van Verkoop je Zaak en begeleid ondernemers bij het verkopen van hun bedrijf. In die gesprekken zag ik steeds hetzelfde: ondernemers willen sturen op de waarde van hun bedrijf, maar missen de informatie om dat te doen.</p>
+          <p>Daarom bouwde ik het Exit Score platform. Jij ziet wat een koper ziet, ruim voordat er een koper aan tafel zit. Jij blijft de ondernemer die de keuzes maakt, ik help je zien welke keuzes het meeste opleveren.</p>
         </div>
       </div>
     </section>
 
+    <!-- REVIEWS -->
+    <section class="reviews">
+      <div class="container">
+        <header class="section-head">
+          <span class="eyebrow">Ervaringen</span>
+          <h2>Wat ondernemers zeggen over werken met Maarten.</h2>
+          <p class="section-sub">Uit openbare Google-reviews.</p>
+        </header>
+        <div class="review-grid">
+          <figure class="review">
+            <blockquote>"Ik weet nu exact welke keuzes ik de komende tijd moet maken. Een aanrader voor elke ondernemer die ooit wil verkopen, ook als dat pas over een paar jaar is!"</blockquote>
+            <figcaption>Jill van den Bosch</figcaption>
+          </figure>
+          <figure class="review">
+            <blockquote>"Mega waardevolle meeting. In driekwartier duidelijk en onderbouwd waar ik sta, wat ik te doen heb."</blockquote>
+            <figcaption>Gerben Roosink</figcaption>
+          </figure>
+          <figure class="review">
+            <blockquote>"Maarten zit goed op de inhoud en heeft een duidelijk structuur voor hoe je het beste je bedrijf kan taxeren en verkopen."</blockquote>
+            <figcaption>P Arend</figcaption>
+          </figure>
+          <figure class="review">
+            <blockquote>"Maarten heeft goed de tijd genomen om voor ons vanuit zijn expertise een stap voor stap traject samen te stellen om ons bedrijf verkoop klaar te maken. We worden begeleid op meerdere vlakken."</blockquote>
+            <figcaption>Stefan Tromp</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
     <section class="final-cta">
       <div class="container final-cta-inner">
-        <h2>Klaar om je bedrijf verkoopklaar te maken?</h2>
-        <p>Begin met de gratis Exit Scorecard. Drie minuten, direct je score.</p>
+        <h2>Benieuwd naar jouw Exit Score?</h2>
+        <p>Begin met de gratis Exit Scorecard. Twee minuten, en je weet waar je staat.</p>
         <a href="https://verkoopjezaak.nl/exit-scorecard/" class="btn btn-accent btn-lg">
           Doe de Exit Scorecard
           <span class="arrow" aria-hidden="true">&rarr;</span>
         </a>
-        <p class="final-sub"><a href="https://verkoopjezaak.nl">Lees meer over Verkoop je Zaak</a></p>
+        <p class="final-sub">Liever meteen met Maarten om tafel? <a href="https://verkoopjezaak.nl/strategiegesprek/">Plan een strategiegesprek</a></p>
       </div>
     </section>
 
@@ -223,7 +339,7 @@
         <nav aria-label="Footer">
           <a href="https://verkoopjezaak.nl/privacy-platform/">Privacy</a>
           <a href="https://verkoopjezaak.nl/voorwaarden/">Voorwaarden</a>
-          <a href="https://verkoopjezaak.nl">verkoopjezaak.nl</a>
+          <a href="https://verkoopjezaak.nl/">verkoopjezaak.nl</a>
         </nav>
       </div>
     </div>

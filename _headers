@@ -1,0 +1,5 @@
+# Previews (pages.dev) nooit indexeren; het eigen domein exitscore.nl valt hier buiten.
+https://:project.pages.dev/*
+  X-Robots-Tag: noindex
+https://:version.:project.pages.dev/*
+  X-Robots-Tag: noindex
