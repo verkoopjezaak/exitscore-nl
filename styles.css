@@ -651,7 +651,7 @@ p { margin: 0 0 1em; }
   align-items: center; justify-content: center; line-height: 1;
 }
 .count { counter-reset: n var(--n); font-family: var(--font-head); font-size: 2.4rem; color: var(--navy); }
-.count::after { content: counter(n); }
+.js .count::after { content: counter(n); }
 .gauge-num small { font-size: 0.72rem; color: var(--text-soft); margin-top: 4px; }
 .dash { --n: 72; }
 .trend { width: 100%; height: 70px; display: block; overflow: visible; }
@@ -690,7 +690,8 @@ p { margin: 0 0 1em; }
 .band-demo { --n: 72; --pos: 1; }
 .band-score { font-size: 0.9rem; color: var(--text-soft); margin-bottom: 14px; }
 .live-score { counter-reset: n var(--n); font-family: var(--font-head); font-size: 1.6rem; color: var(--navy); margin-left: 6px; }
-.live-score::after { content: counter(n); }
+.js .live-score::after { content: counter(n); }
+.js .count .num, .js .live-score .num { display: none; }
 .band-track {
   position: relative; height: 64px; border-radius: 12px;
   background: repeating-linear-gradient(90deg, var(--cool) 0 calc(10% - 1px), #e2e7f2 calc(10% - 1px) 10%);
@@ -781,4 +782,30 @@ p { margin: 0 0 1em; }
 }
 @media (prefers-reduced-motion: reduce) {
   .in.dash, .in .trend-line, .in i, .in.band-demo { animation: none !important; }
+}
+
+/* ---------- verwerkronde reviews ---------- */
+.route-line { margin: 22px 0 0; color: var(--navy); font-weight: 500; max-width: 540px; }
+.byline { display: inline-flex; align-items: center; gap: 10px; margin-top: 18px; font-size: 0.88rem; color: var(--text-soft); }
+.byline img { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; object-position: center top; background: var(--white); flex-shrink: 0; }
+.byline:hover { color: var(--navy); }
+.feature-card p.small { margin-top: 10px; font-size: 0.85rem; }
+.start { padding: 96px 0 0; }
+.start-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.start-list li { display: flex; gap: 16px; align-items: flex-start; background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); padding: 24px; box-shadow: var(--shadow-sm); }
+.start-list .step-tag { flex-shrink: 0; margin: 0; }
+.start-list h3 { margin-bottom: 6px; }
+.start-list p { margin: 0; color: var(--text-soft); font-size: 0.95rem; }
+.final-quote { margin: 8px auto 0; max-width: 520px; }
+.final-quote blockquote { margin: 0 0 8px; font-size: 1rem; color: rgba(255, 255, 255, 0.9); font-style: italic; }
+.final-quote figcaption { font-size: 0.85rem; color: var(--green); }
+.footer-contact { margin-top: 6px !important; }
+.footer-contact a { color: var(--text-soft); }
+@media (max-width: 960px) {
+  .start { padding-top: 72px; }
+  .start-list { grid-template-columns: 1fr; gap: 16px; }
+}
+@media (max-width: 720px) {
+  .route-line { font-size: 0.95rem; }
+  .byline { font-size: 0.82rem; }
 }
